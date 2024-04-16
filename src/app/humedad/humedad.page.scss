@@ -1,0 +1,314 @@
+/* Paleta de colores */
+$color-1: #EAEF9D;
+$color-2: #C1D95C;
+$color-3: #80B155;
+$color-4: #498428;
+$color-5: #336A29;
+
+/* Estilos globales */
+body {
+  font-family: 'Roboto', sans-serif; /* Fuente Roboto para todo el cuerpo */
+  color: #333;
+  margin: 0;
+  padding: 0;
+}
+
+/* Estilos para el contenido */
+ion-content.custom-content {
+  --background: #f4f4f4;
+}
+
+/* Encabezado */
+.header-container {
+  ion-header {
+    --background: linear-gradient(135deg, #498428, #80B155);
+    --box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  }
+}
+
+.titulo-texto {
+    color: #80B155; /* Cambia el color al código hexadecimal de tu color verde */
+    font-size: 25px; /* Tamaño de fuente */
+    font-weight: bold; /* Negrita, si lo deseas */
+    text-align: center;
+    width: auto;
+    text-shadow: 0px 0px 2px rgba(0, 0, 0, 0.5);
+  }
+
+.subtitle-texto {
+  color: #80B155; /* Cambia el color al código hexadecimal de tu color verde */
+  font-size: 16px; /* Tamaño de fuente */
+  font-weight: bold; /* Negrita, si lo deseas */
+  text-align: center;
+  width: auto;
+  text-shadow: 0px 0px 2px rgba(0, 0, 0, 0.5);
+  margin-top: -15px;
+}
+
+/* Estilos para el detalle de la planta */
+.plant-detail {
+  text-shadow: 0px 0px 2px rgba(0, 0, 0, 0.5);
+  background-color: #EAEF9D; /* Color de fondo */
+  padding: 8px; /* Espaciado interno */
+  text-align: center; /* Alinear el texto al centro */
+  border-radius: 10px; /* Bordes redondeados */
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Sombra */
+  max-width: 300px; /* Ancho máximo */
+  margin: 0 auto 20px; /* Margen inferior y centrado horizontalmente */
+  font-size: 21px; /* Tamaño de fuente */
+  font-weight: bold; /* Negrita */
+  
+}
+
+
+/* Estilos para el contenedor del menú */
+.menu-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  margin-top: 15px;
+  box-shadow: 0 5px 6px rgba(0, 0, 0, 0.1); /* Sombra */
+}
+
+/* Estilos para cada ítem del menú */
+.menu {
+  margin: 8px;
+  text-align: center;
+  
+}
+
+/* Estilos para los botones del menú */
+.menu-button { 
+  
+  text-shadow: 0px 0px 2px rgba(0, 0, 0, 0.5);
+  border: none;
+  font-size: 16px; /* Tamaño de fuente */
+  font-weight: 500;
+  color: white;
+  text-align: justify;
+  width: auto; /* Ancho automático para ajustarse al contenido */
+  height: 38px; /* Altura fija para los botones */
+  background-color: #336A29; /* Color de fondo */
+  padding: 0.8em 1em; /* Espaciado interno ajustado */
+  border-radius: 20px; /* Bordes redondeados */
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Sombra */
+  transition: transform 0.3s ease; /* Transición suave al pasar el mouse */
+  
+  /* Alineación vertical del texto */
+  display: flex;
+  align-items: center;
+
+  ion-icon {
+    margin-right: 5px; /* Espacio entre el icono y el texto */
+  }
+
+  &:hover {
+    transform: translateY(-2px); /* Efecto de elevación al pasar el mouse */
+  }
+}
+
+/* Estilos para el contenedor del detalle de la planta */
+.plant-detail-container {
+   box-shadow: 0 5px 6px rgba(0, 0, 0, 0.1); /* Sombra */
+  padding: 20px; /* Espaciado interno */
+  margin: 5px;
+}
+
+.temperature-container {
+  text-shadow: 0px 0px 2px rgba(0, 0, 0, 0.5);
+  background-color: $color-2;
+  border-radius: 10px;
+  padding: 15px;
+  display: flex;
+  justify-content: space-around;
+  align-items: stretch; /* Estirar elementos hijos para que coincidan con la altura del contenedor */
+  color: #333;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  max-width: 100%;
+  margin-left: auto;
+  margin-right: auto;
+
+
+  /* Estilos para los elementos internos */
+  .temperature,
+  .estimated-temperature {
+    width: 48%;
+    padding: 8px;
+    border-radius: 10px;
+    background-color: #EAEF9D;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    display: flex;
+    align-items: center;
+    justify-content: center; // Centra el contenido horizontalmente
+    text-align: center; // Centra el texto dentro del contenedor
+ 
+  }
+
+  .temperature ion-button,
+  .estimated-temperature ion-button {
+    white-space: nowrap; // Evita que el texto se divida en varias líneas
+    overflow: hidden; // Oculta el texto que se desborda
+    text-overflow: ellipsis; // Agrega puntos suspensivos (...) cuando el texto se desborda
+    font-weight: bold; // Establece el texto en negrita
+    border-radius: 10px;
+  }
+  
+
+  .temperature ion-icon,
+  .estimated-temperature ion-icon {
+    font-size: 2em; /* Tamaño fijo para el ícono */
+    color: $color-4;
+    margin-right: 8px;
+  }
+
+  .temperature p,
+  .estimated-temperature p {
+    margin: 0;
+  }
+
+  
+}
+
+
+/* Estilos para los botones */
+.footer-button {
+  text-shadow: 0px 0px 2px rgba(0, 0, 0, 0.5);
+  border: none;
+  font-size: 13px;
+  font-weight: bold;
+  color: white;
+  background-color: #498428;
+  padding: 0.5em 1em;
+  border-radius: 20px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  margin: 0 10px; /* Espacio entre los botones */
+}
+
+/* Estilos para el contenedor de los botones del pie de página */
+.footer-buttons-container {
+  display: flex; /* Utiliza flexbox para alinear los elementos */
+  justify-content: center; /* Centra los elementos horizontalmente */
+  margin-top: 20px; /* Ajusta el margen superior según sea necesario */
+}
+
+/* Estilos para el contenedor del botón de ayuda */
+.footer-button-container {
+  display: flex; /* Utiliza flexbox para alinear los elementos */
+  justify-content: center; /* Centra los elementos horizontalmente */
+  margin-top: 20px; /* Ajusta el margen superior según sea necesario */
+}
+
+
+.footer-icon {
+  font-size: 1.5em; /* Tamaño del icono */
+  color: white; /* Color del icono */
+  cursor: pointer; /* Cambia el cursor al pasar por encima */
+}
+
+
+/* Media query para dispositivos móviles */
+@media screen and (max-width: 768px) {
+  /* Cambiar la dirección a fila para pantallas pequeñas */
+  .footer-container {
+    flex-direction: row;
+    justify-content: center; /* Centra los elementos horizontalmente */
+    align-items: center; /* Centra los elementos verticalmente */
+  }
+
+  /* Ajustar los márgenes para los botones en pantallas pequeñas */
+  .footer-button {
+    margin: 0 5px; /* Espacio entre los botones */
+  }
+
+  /* Ajustar el margen inferior solo para el tercer botón */
+  .footer-button:last-child {
+    margin-bottom: 0;
+  }
+}
+
+/* Estilos para el pie de página */
+ion-footer {
+  ion-toolbar.footer-toolbar {
+    --background: #333;
+    --color: white;
+    text-align: center;
+    font-size: 0.9em;
+    padding: 10px;
+  }
+}
+
+
+/* Estilo para los botones de encender y apagar luz */
+.temperature-container ion-button {
+    border: 2px solid transparent; /* Borde transparente por defecto */
+    font-family: 'Roboto', sans-serif; /* Utiliza la misma fuente que los demás elementos */
+    font-weight: bold; /* Peso de la fuente en negrita */
+    text-shadow: 0px 0px 2px rgba(0, 0, 0, 0.5);
+   
+  }
+  
+  .temperature-container ion-button ion-icon {
+    font-size: 24px; /* Tamaño del icono */
+  }
+  
+  .temperature-container ion-button[disabled] {
+    background-color: #ccc; /* Color de fondo gris para botones deshabilitados */
+    border-color: #999; /* Color de borde gris para botones deshabilitados */
+    font-family: 'Roboto', sans-serif; /* Utiliza la misma fuente que los demás elementos */
+    font-weight: bold; /* Peso de la fuente en negrita */
+    text-shadow: 0px 0px 2px rgba(0, 0, 0, 0.5);
+    
+  }
+  
+  .temperature-container ion-button:not([disabled]) {
+    background-color: #C1D95C; /* Color de fondo para botones habilitados */
+    border-color: #80B155; /* Color de borde para botones habilitados */
+    font-family: 'Roboto', sans-serif; /* Utiliza la misma fuente que los demás elementos */
+    font-weight: bold; /* Peso de la fuente en negrita */
+    text-shadow: 0px 0px 2px rgba(0, 0, 0, 0.5);
+    
+  }
+  
+  .temperature-container ion-button:not([disabled]) ion-icon {
+    color: #336A29; /* Color del icono para botones habilitados */
+    font-family: 'Roboto', sans-serif; /* Utiliza la misma fuente que los demás elementos */
+    font-weight: bold; /* Peso de la fuente en negrita */
+    text-shadow: 0px 0px 2px rgba(0, 0, 0, 0.5);
+   
+  }
+
+  .timer {
+    margin-bottom: 2px;
+    text-align: center; /* Alinea el texto al centro */
+  }
+  
+  .timer p {
+    text-shadow: 0px 0px 2px rgba(0, 0, 0, 0.5);
+    font-size: 20px; /* Tamaño de fuente */
+    font-weight: bold; /* Negrita */
+    color: #333; /* Color del texto */
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.5); /* Sombra de texto */
+    border-radius: 10px;
+    padding: 5px;
+    background-color: #80B155;
+    border: 2px solid #333; /* Borde transparente por defecto */
+  }
+  
+  .timer-container {
+     text-shadow: 0px 0px 2px rgba(0, 0, 0, 0.5);
+    display: flex;
+    flex-direction: column;
+  }
+  
+  .button-container {
+    text-shadow: 0px 0px 2px rgba(0, 0, 0, 0.5);
+    display: flex;
+    justify-content: center;
+    padding-bottom: 1px;
+    font-family: 'Roboto', sans-serif; /* Utiliza la misma fuente que los demás elementos */
+    font-weight: bold; /* Peso de la fuente en negrita */
+    
+  }
+  
+  

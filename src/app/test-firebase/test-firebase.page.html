@@ -1,0 +1,37 @@
+<ion-content>
+  <div class="table-responsive">
+    <table class="table">
+      <thead>
+        <tr>
+          <th>Agua</th>
+          <th>Aire</th>
+          <th>Luz</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr *ngFor="let item of pixcappCollection">
+          
+          <td>
+            <ion-badge>{{ item.data.agua }}</ion-badge>
+            <ion-button (click)="sendData(item.data.agua.toString())">
+              {{ item.data.agua ? 'Apagar' : 'Encender' }}
+            </ion-button>
+          </td>
+          <td>
+            <ion-badge>{{ item.data.aire }}</ion-badge>
+            <ion-button (click)="sendData(item.data.aire.toString())">
+              {{ item.data.aire ? 'Apagar' : 'Encender' }}
+            </ion-button>
+          </td>
+          <td>
+            <ion-badge>{{ item.data.luz }}</ion-badge>
+            <ion-button (click)="sendData(item.data.luz.toString())">
+              {{ item.data.luz ? 'Apagar' : 'Encender' }}
+            </ion-button>
+          </td>
+          
+        </tr>
+      </tbody>
+    </table>
+  </div>
+</ion-content>

@@ -1,0 +1,29 @@
+/* Estilos para los botones */
+ion-button {
+    margin-left: 10px; /* Ajusta el margen entre los botones */
+}
+
+/* Estilos para los badges */
+ion-badge {
+    margin-right: 10px; /* Ajusta el margen entre los badges y los botones */
+}
+
+/* Estilos para los ítems */
+ion-item {
+    margin-bottom: 10px; /* Ajusta el margen entre los ítems */
+}
+
+/* Media query para pantallas pequeñas */
+@media (max-width: 576px) {
+    ion-button {
+        margin-left: 5px; /* Reduce el margen entre los botones en pantallas pequeñas */
+    }
+
+    ion-badge {
+        margin-right: 5px; /* Reduce el margen entre los badges y los botones en pantallas pequeñas */
+    }
+
+    ion-item {
+        margin-bottom: 5px; /* Reduce el margen entre los ítems en pantallas pequeñas */
+    }
+}

@@ -1,0 +1,92 @@
+<ion-app>
+  <ion-content [fullscreen]="true" class="custom-content">
+
+    <!-- Encabezado -->
+    <div class="header-container">
+      <ion-header collapse="condense">
+        <ion-toolbar>
+          <ion-title size="large" (click)="goToHome()">
+            <div class="Titulo-texto"  style="margin-top: 10px;">
+              <ion-icon name="home"></ion-icon>
+              PIXCAPP
+            </div>
+            <div class="subtitle-texto">
+              <p>CULTIVA EL FUTURO.</p>
+            </div>
+          </ion-title>
+
+        </ion-toolbar>
+      </ion-header>
+    </div>
+
+
+    <!-- Nuevo apartado superior -->
+    <div class="plant-detail-container">
+      <div class="plant-detail">
+        <p>Control de Iluminación:</p>
+      </div>
+
+
+      <div class="temperature-container">
+        <div class="temperature">
+          <ion-button [disabled]="lightStatus === 1" (click)="turnOnLight()" color="Medium">
+            Encender <br>Luz
+          </ion-button>
+        </div>
+        <div class="estimated-temperature">
+          <ion-button [disabled]="lightStatus === 0" (click)="turnOffLight()" color="Medium">
+            Apagar <br>Luz
+          </ion-button>
+        </div>
+      </div>
+      
+      <div class="logo-wrapper">
+        <div class="left-column"></div>
+        <div class="logo-container" [ngClass]="{'light-on': lightStatus === 1, 'light-off': lightStatus === 0}">
+          <img *ngIf="lightStatus === 0" src="../../assets/img/P1v2.png" class="responsive-image">
+          <img *ngIf="lightStatus === 1" src="../../assets/img/P2v2.png" class="responsive-image">
+        </div>
+        <div class="right-column"></div>
+      </div>
+      
+      
+      
+
+    </div>      
+
+
+
+    <div class="subtitle">
+      <ion-toolbar class="footer-container">
+        <br>
+        <div class="footer-buttons-container"> <!-- Contenedor para centrar los botones -->
+          <ion-button class="footer-button" color="Medium">
+            <ion-icon name="settings"></ion-icon>
+            Ajustes
+          </ion-button>
+          <ion-button class="footer-button" color="Medium">
+            <ion-icon name="notifications"></ion-icon>
+            Notificaciones
+          </ion-button>
+        </div>
+        <div>
+          <p></p>
+        </div>
+        <div class="footer-button-container"> <!-- Contenedor para centrar el botón de ayuda -->
+          <ion-button class="footer-button" color="Medium">
+            <ion-icon name="help-circle"></ion-icon>
+            Ayuda
+          </ion-button>
+        </div>
+        <br>
+      </ion-toolbar>
+    </div>
+
+    <ion-footer>
+      <ion-toolbar class="footer-toolbar">
+        <p>&copy; 2024 PIXCAPP. Todos los derechos reservados.</p>
+      </ion-toolbar>
+    </ion-footer>
+  </ion-content>
+
+</ion-app>
